@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manicure & Pedicure - Noori Beauty Parlor</title>
+    <style>
+        body { font-family:Arial, sans-serif; background:#fff0f5; margin:0; color:#333; }
+        header, footer { background:#ff69b4; color:white; text-align:center; padding:20px; }
+        section { max-width:800px; margin:30px auto; background:white; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+        label, input, select, textarea, button { display:block; width:100%; margin-bottom:15px; padding:10px; border-radius:5px; }
+        button { background:#ff1493; color:white; border:none; cursor:pointer; transition:0.3s; }
+        button:hover { background:#ff69b4; }
+        img { width:100%; border-radius:10px; margin-bottom:20px; }
+    </style>
+</head>
+<body>
+
+<header>Manicure & Pedicure - Noori Beauty Parlor</header>
+
+<section>
+    <h2>Choose Your Nail Care</h2>
+    <p>Select the manicure or pedicure service you want and book for salon or home service.</p>
+
+    <!-- Sample Image -->
+    <img src="nail.jpg" alt="Manicure & Pedicure Sample">
+
+    <form>
+        <label>Your Name:</label>
+        <input type="text" placeholder="Your Name" required>
+        
+        <label>Email:</label>
+        <input type="email" placeholder="Your Email" required>
+        
+        <label>Phone:</label>
+        <input type="tel" placeholder="10-digit number" pattern="[0-9]{10}" required>
+        
+        <label>Select Service:</label>
+        <select required>
+            <option value="">Choose Service</option>
+            <option>Basic Manicure</option>
+            <option>Deluxe Manicure</option>
+            <option>Basic Pedicure</option>
+            <option>Deluxe Pedicure</option>
+            <option>Nail Art</option>
+        </select>
+
+        <label>Service Location:</label>
+        <select required>
+            <option value="">Select</option>
+            <option>At Salon</option>
+            <option>Home Service</option>
+        </select>
+
+        <label>Message:</label>
+        <textarea placeholder="Your requirements..." rows="4"></textarea>
+
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+
+<footer>&copy; 2025 Noori Beauty Parlor. All Rights Reserved.</footer>
+
+</body>
+</html>
