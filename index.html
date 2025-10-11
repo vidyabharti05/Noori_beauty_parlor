@@ -12,6 +12,35 @@
         nav { display:flex; justify-content:center; background-color:#ffc0cb; }
         nav a { text-decoration:none; color:white; font-weight:bold; padding:15px 20px; transition:0.3s; }
         nav a:hover { background-color:#ff1493; border-radius:5px; }
+        .offer-banner {
+  background-color: #ffebf3;     /* halka pink background */
+  color: #c2185b;                /* dark pink text */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-top: 2px solid #c2185b;
+  border-bottom: 2px solid #c2185b;
+  position: relative;
+}
+
+/* Text ko continuous chalane ke liye animation */
+.offer-banner::after {
+  content: attr(data-text);
+}
+
+.offer-banner span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 12s linear infinite; /* speed control yahan se */
+}
+
+@keyframes scrollText {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
         section { max-width:1000px; margin:30px auto; padding:20px; background:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);}
         section h2 { color:#ff1493; margin-bottom:15px; }
         .services { display:flex; flex-wrap:wrap; gap:20px; }
@@ -150,6 +179,10 @@
 <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-button">💬</a>
 
 <script>
+      // JS se text wrap karte hain animation ke liye
+  const ticker = document.querySelector('.news-ticker');
+  const text = ticker.innerHTML;
+  ticker.innerHTML = `<span>${text}</span>`;
 function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -199,3 +232,4 @@ renderBookings(); renderFeedback();
    
 </body>
 </html>
+
