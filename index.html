@@ -170,9 +170,10 @@
 
 <script>
   // Make the offer banner scroll like a news ticker
-  const banner = document.querySelector('.offer-banner');
-  const text = banner.innerHTML;
-  banner.innerHTML = `<span>${text}</span>`;
+    const banner = document.querySelector('.offer-banner');
+    const text = banner.innerHTML;
+    banner.innerHTML = `<span>${text}</span>`;
+
 
   function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -225,3 +226,4 @@
 </script> 
 </body>
 </html>
+
